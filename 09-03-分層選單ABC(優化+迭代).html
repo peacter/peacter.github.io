@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #button-1,#button-2,#button-3{
+            background-color: pink;
+            padding: 10px 0;
+            width: 5%;
+            border-bottom: none;
+            border-right: none;
+            /* 消除按鈕下邊與右邊的預設雙線(看起來像個立體陰影) */
+            cursor: pointer;
+            /* 游標樣式改小手手 */
+            outline:none;
+            /* 消除按鈕預設點擊後會有的藍色框 */
+        }
+        #button-1{
+            border-top-left-radius: 30%;
+        }
+        #button-3{
+            border-top-right-radius: 30%;
+        }
+        .content-1{
+            display: none;
+            background-color: wheat;
+            padding: 20px 40px;
+        }
+        .content-2{
+            display: none;
+            background-color: wheat;
+            padding: 20px 40px;
+        }
+        .content-3{
+            display: none;
+            background-color: wheat;
+            padding: 20px 40px;
+        }
+        .out{
+            display: block;
+        }
+        #button-1:hover,
+        #button-2:hover,
+        #button-3:hover{
+            background-color: wheat;
+        }
+
+        /* 點擊改變顏色設定 */
+        #button-1.changeColor{
+            background-color: wheat;
+        }
+        #button-2.changeColor{
+            background-color: wheat;
+        }
+        #button-3.changeColor{
+            background-color: wheat;
+        }
+        
+    </style>
+
+</head>
+<body>
+    <button id="button-1" class="button_all">AAA</button><button id="button-2" class="button_all">BBB</button><button id="button-3" class="button_all">CCC</button>
+    <!-- 換行會有間隙= = -->
+    <div class="content-1 out ctt_all"><h1>AAAAAAAAAAAAAAAAAAAAAAAAAAAA</h1></div>
+    <div class="content-2 ctt_all"><h1>BBBBBBBBBBBBBBBBBBBBBBBBBBBB</h1></div>
+    <div class="content-3 ctt_all"><h1>CCCCCCCCCCCCCCCCCCCCCCCCCCCC</h1></div>
+
+    <script>
+
+        // 迭代
+        var arrayBtn = document.querySelectorAll(".button_all");
+        var arrayCtt = document.querySelectorAll(".ctt_all");
+        // 為了方便選擇，所以各創了一個共同屬性
+        // 抓出來為陣列，不能直接給予事件
+
+        for (let i = 0; i < arrayBtn.length; i++) {
+            const btn_all = arrayBtn[i];
+            const ctt_all = arrayCtt[i];
+
+            btn_all.onclick = function(){
+                remove_effects();
+                ctt_all.classList.add("out");
+                btn_all.classList.add("changeColor");
+            }
+        }
+        function remove_effects(){
+        // for放在function裡面
+            for (let i = 0; i < arrayBtn.length; i++) {
+                const btn_all = arrayBtn[i];
+                const ctt_all = arrayCtt[i];
+
+                btn_all.classList.remove("changeColor");
+                ctt_all.classList.remove("out");
+            }        
+        }
+        
+            
+        
+    </script>
+</body>
+</html>

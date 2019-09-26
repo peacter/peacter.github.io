@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            background-color: rgb(221, 238, 221);
+        }
+        .index-img{
+            position: absolute;
+            top: 0;
+            width: 70%;
+            height: 100vh;
+            opacity: 0.2;
+            background-size: contain;
+        }
+        .ballA{
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+            top: -20px;
+            animation-name: rolling_A;
+            animation-duration: 4s;
+            transition: 0.5;
+            animation-fill-mode: forwards;
+        }
+        .img_ABCD{
+            width: 50px;
+        }
+        .ballB{
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+            top: -60px;
+            animation-name: rolling_B;
+            animation-duration: 4s;
+            transition: 0.5;
+            animation-fill-mode: forwards;
+            animation-delay: 4s;
+        }
+        .ballC{
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+            top: -60px;
+            animation-name: rolling_C;
+            animation-duration: 4s;
+            transition: 0.5;
+            animation-fill-mode: forwards;
+            animation-delay: 8s;
+        }
+        .ballD{
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+            top: -60px;
+            animation-name: rolling_D;
+            animation-duration: 4s;
+            transition: 0.5;
+            animation-fill-mode: forwards;
+            animation-delay: 12s;
+        }
+        .path img{
+            width: 50vw;
+            height: 7vh;
+            opacity: 1;
+            margin-top: 9vh;
+        }
+        .loading_logo{
+            display: flex;
+            justify-content: flex-end;
+            width: 20vw;
+            height: 30vh;
+            margin-left: 70vw;
+            margin-top: 25vh;
+        }
+        .loading_logo img{
+            height: 100%;
+        }
+        .fadeOut{
+            width: 13.5%;
+            height: 30%;
+            position: absolute;
+            background-color: rgb(221, 238, 221);
+            animation-name: fadeOut;
+            animation-duration: 12s;
+            animation-delay: 4s;
+            animation-fill-mode: forwards;
+            animation-timing-function: linear;
+            /* 從頭到尾等速度 */
+            opacity: 1;
+        }
+        .pot img{
+            width: 30vw;
+            position: absolute;
+            bottom: 0;
+            left: calc(50% - 15vw);
+        }
+        
+        
+        @keyframes fadeOut {
+            0%{
+                opacity: 1;
+                height: 30%;
+            }
+            25%{
+                opacity: 1;
+                height: 22.5%;
+            }
+            50%{
+                opacity: 1;
+                height: 15%;
+            }
+            75%{
+                opacity: 1;
+                height: 7.5%;
+            }
+            100%{
+                opacity: 1;
+                height: 0;
+            }
+        }
+        
+        @keyframes rolling_A {
+            10%{
+                top: calc(10vh - 20px);
+                left: 0;
+            }
+            20%{
+                top: calc(10vh - 20px);
+                left: 0;
+                background-color: aqua;
+            }
+            25%{
+                top: 1vh;
+                left: 10vw;
+            }
+            30%{
+                top: calc(10vh - 20px);
+                left: 10vw;
+            }
+            35%{
+                top: calc(10vh - 20px);
+                left: 10vw;
+                background-color: red;
+            }
+            40%{
+                top: 0;
+                left: 20vw;
+            }
+            45%{
+                top: calc(10vh - 20px);
+                left: 20vw;
+            }
+            50%{
+                top: calc(10vh - 20px);
+                left: 20vw;
+                background-color: aqua;
+            }
+            55%{
+                top: 0;
+                left: 30vw;
+            }
+            60%{
+                top: calc(10vh - 20px);
+                left: 30vw;
+            }
+            65%{
+                top: calc(10vh - 20px);
+                left: 30vw;
+                background-color: red;
+            }
+            70%{
+                top: calc(10vh - 20px);
+                left: 50vw;
+            }
+            80%{
+                top: calc(10vh - 20px);
+                left: 50vw;
+                background-color: aqua;
+            }
+            85%{
+                top: calc(10vh - 20px);
+                left: 50vw;
+                transform: scale(1) rotate(720deg);
+                opacity: 1;
+            }
+            100%{
+                left: 50vw;
+                top: 70vh;
+                /* 考慮到放大 */
+                transform: scale(2);
+                opacity: 0;
+            }
+        }
+        @keyframes rolling_B {
+            10%{
+                top: calc(10vh - 20px);
+                left: 0;
+            }
+            20%{
+                top: calc(10vh - 20px);
+                left: 0;
+                background-color: aqua;
+            }
+            25%{
+                top: 1vh;
+                left: 10vw;
+            }
+            30%{
+                top: calc(10vh - 20px);
+                left: 10vw;
+            }
+            35%{
+                top: calc(10vh - 20px);
+                left: 10vw;
+                background-color: red;
+            }
+            40%{
+                top: 0;
+                left: 20vw;
+            }
+            45%{
+                top: calc(10vh - 20px);
+                left: 20vw;
+            }
+            50%{
+                top: calc(10vh - 20px);
+                left: 20vw;
+                background-color: aqua;
+            }
+            55%{
+                top: 0;
+                left: 30vw;
+            }
+            60%{
+                top: calc(10vh - 20px);
+                left: 30vw;
+            }
+            65%{
+                top: calc(10vh - 20px);
+                left: 30vw;
+                background-color: red;
+            }
+            70%{
+                top: calc(10vh - 20px);
+                left: 50vw;
+            }
+            80%{
+                top: calc(10vh - 20px);
+                left: 50vw;
+                background-color: aqua;
+            }
+            85%{
+                top: 70vh;
+                left: 50vw;
+                transform: scale(1) rotate(720deg);
+                opacity: 1;
+            }
+            100%{
+                left: 50vw;
+                top: calc(100vh - 70px);
+                /* 考慮到放大 */
+                opacity: 0;
+                transform: scale(2);
+            }
+        }
+        @keyframes rolling_C {
+            10%{
+                top: calc(10vh - 20px);
+                left: 0;
+            }
+            20%{
+                top: calc(10vh - 20px);
+                left: 0;
+                background-color: aqua;
+            }
+            25%{
+                top: 1vh;
+                left: 10vw;
+            }
+            30%{
+                top: calc(10vh - 20px);
+                left: 10vw;
+            }
+            35%{
+                top: calc(10vh - 20px);
+                left: 10vw;
+                background-color: red;
+            }
+            40%{
+                top: 0;
+                left: 20vw;
+            }
+            45%{
+                top: calc(10vh - 20px);
+                left: 20vw;
+            }
+            50%{
+                top: calc(10vh - 20px);
+                left: 20vw;
+                background-color: aqua;
+            }
+            55%{
+                top: 0;
+                left: 30vw;
+            }
+            60%{
+                top: calc(10vh - 20px);
+                left: 30vw;
+            }
+            65%{
+                top: calc(10vh - 20px);
+                left: 30vw;
+                background-color: red;
+            }
+            70%{
+                top: calc(10vh - 20px);
+                left: 50vw;
+            }
+            80%{
+                top: calc(10vh - 20px);
+                left: 50vw;
+                background-color: aqua;
+            }
+            85%{
+                top: calc(10vh - 20px);
+                left: 50vw;
+                transform: scale(1) rotate(720deg);
+                opacity: 1;
+            }
+            100%{
+                left: 50vw;
+                top: 70vh;
+                /* 考慮到放大 */
+                transform: scale(2);
+                opacity: 0;
+            }
+        }
+        @keyframes rolling_D {
+            10%{
+                top: calc(10vh - 20px);
+                left: 0;
+            }
+            20%{
+                top: calc(10vh - 20px);
+                left: 0;
+                background-color: aqua;
+            }
+            25%{
+                top: 1vh;
+                left: 10vw;
+            }
+            30%{
+                top: calc(10vh - 20px);
+                left: 10vw;
+            }
+            35%{
+                top: calc(10vh - 20px);
+                left: 10vw;
+                background-color: red;
+            }
+            40%{
+                top: 0;
+                left: 20vw;
+            }
+            45%{
+                top: calc(10vh - 20px);
+                left: 20vw;
+            }
+            50%{
+                top: calc(10vh - 20px);
+                left: 20vw;
+                background-color: aqua;
+            }
+            55%{
+                top: 0;
+                left: 30vw;
+            }
+            60%{
+                top: calc(10vh - 20px);
+                left: 30vw;
+            }
+            65%{
+                top: calc(10vh - 20px);
+                left: 30vw;
+                background-color: red;
+            }
+            70%{
+                top: calc(10vh - 20px);
+                left: 50vw;
+            }
+            80%{
+                top: calc(10vh - 20px);
+                left: 50vw;
+                background-color: aqua;
+            }
+            85%{
+                top: calc(10vh - 20px);
+                left: 50vw;
+                transform: scale(1) rotate(720deg);
+                opacity: 1;
+            }
+            100%{
+                left: 50vw;
+                top: 70vh;
+                /* 考慮到放大 */
+                transform: scale(2);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="index">
+        <img class="index-img" src="./loading-img/背景紋路.jpg" alt="">
+        <div class="ballA"><img class="img_ABCD" src="./loading-img/胡蘿蔔-V2.png" alt=""></div>
+        <div class="ballB"><img class="img_ABCD" src="./loading-img/辣椒-02.png" alt=""></div>
+        <div class="ballC"><img class="img_ABCD" src="./loading-img/雞-02.png" alt=""></div>
+        <div class="ballD"><img class="img_ABCD" src="./loading-img/蔬菜-03.png" alt=""></div>
+        <div class="path"><img src="./loading-img/竹子-04.png" alt=""></div>
+        <div class="pot"><img src="./loading-img/鍋子-02.png" alt=""></div>
+        
+        <div class="loading_logo">
+            <img src="./loading-img/瓦庫Logo.png" alt="瓦庫麻辣鍋Logo圖" title="瓦庫麻辣鍋">
+            <div class="fadeOut"></div>
+        </div>
+    </div>
+        
+</body>
+</html>

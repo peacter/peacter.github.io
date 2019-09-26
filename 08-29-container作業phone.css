@@ -1,0 +1,347 @@
+*{
+    box-sizing: border-box;    
+}
+body{
+    margin: 0;
+}
+
+@media (max-width: 991px){
+html{
+    scroll-behavior: smooth;
+    /* 超連結緩慢移動頁面 */
+}
+    
+#all{
+    width: 100%;        
+}
+    
+    #Navbar{
+        background-color: #4267b2;
+        width: 100%;
+        height: 80px;
+        position: fixed;
+        /* 釘住Navbar */
+        z-index: 99;
+        /* 圖層順序 */  
+        padding: 10px 0;    
+    }
+    #boxall{
+        width: 80px;
+        height: 80%;
+        background-color: purple;
+        position: absolute;
+        border-radius: 15px;
+        left: 45%;
+        padding-top: 60px;
+    }
+    #box1{
+        background-color: yellow;
+        width: 100%;
+        
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #box2{
+        background-color: yellow;
+        width: 100%;
+        
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    #box3{
+        background-color: yellow;
+        width: 100%;
+    
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #box4{
+        background-color: yellow;
+        width: 100%;
+        
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    #box5{
+        background-color: yellow;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #logo{
+        width: 80%;
+        height: 80%;
+        border: 40% solid white;
+        border-radius: 80px; 
+        position: absolute;
+        left: 2%;
+        top: 5%;       
+    }
+    .logo-img{
+        width: 72px;
+        border-radius: 72px;
+    }
+
+    #banner{
+        width: 100%;
+  
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 0 2%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* 將文字方塊置中 */
+    }
+      
+    .banner-img{
+        width: 100%;
+        
+    }      
+
+    #banner-text{
+        background-color: rgba(36, 70, 224, 0.616);
+        width: 40%;
+        height: 10%;
+        font-size: 120%;
+        letter-spacing: 12px;
+        font-family: 'Noto Sans TC', sans-serif;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* 將文字置中 */
+        color: white;
+        position: absolute;
+        /* 置中不可少，不設會被div特性隔到旁邊去 */
+    }
+    #content{
+        width: 100%;
+        padding: 0 2%
+    }
+    #content-redhair{
+        width: 100%;
+                
+        background-color: gray;
+        display: flex;
+        
+        justify-content: center;    
+            
+    }
+    #redhair-box{
+        width: 100%;
+    }
+    #redhair-text{
+        width: 100%;
+        padding: 20%;
+        font-family: 'Noto Sans TC', sans-serif;
+        color: white;
+    }
+    .redhair-img{
+        width: 100%;
+        height: 40%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        
+    }
+
+    #content-black{
+        width: 100%;       
+    }
+    #black-box{
+        width: 100%;
+    }
+    #black-text{
+        width: 100%;
+        font-family: 'Noto Sans TC', sans-serif;
+        line-height: 5vh;
+        padding: 5%;
+        
+    }
+    .black-img{
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    #content-kaido{
+        width: 100%;
+        height: 100vh;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top right;
+        background-image: url("./img-onepiece/kaido.png");
+        padding: 0 2%;
+    }
+
+    #content-bigmom{
+        width: 100%;
+        background-color: green;
+        
+    }
+    #bigmom-1{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .bigmom-img1{
+        width: 100%;
+        
+    }
+    #bigmom-text1{        
+        font-size: 26px;
+        letter-spacing: 12px;        
+        font-family: 'Noto Sans TC', sans-serif;
+        color: white;
+        position: absolute;
+    }
+    #bigmom-2{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .bigmom-img2{
+        width: 100%;
+    }
+    #bigmom-text2{        
+        font-size: 26px;
+        letter-spacing: 12px;        
+        font-family: 'Noto Sans TC', sans-serif;
+        position: absolute;
+        color: black;
+        font-weight: bold;
+    }
+    #footer{
+        width: 100%;
+        height: 80px;
+        background-color: black;
+        text-align: center;        
+        color: white;
+        position: relative;
+        line-height: 80px;
+    }
+    #box6{
+        background-color: greenyellow;
+        
+        width: 60px;
+        height: 60px;
+        /* position: absolute; 關掉讓按鈕浮動*/
+        right: 10px;
+        bottom: 10px;
+        text-align: center;
+        line-height: 60px;
+        border-radius: 30px;
+        position: fixed;
+        /* 加上讓按鈕浮動 */
+    }
+    .container{
+        margin: auto;
+        max-width: 1140px;
+    }
+    .menu{
+        color: aqua;
+        position: absolute;
+        top: 5px;
+        left: 20%;
+        font-size: 55px;
+        /* icon大小視為文字來改 */
+        transition: 1s;
+    }
+    .box-phone{
+        display: none;
+        padding: 0 10%;
+    }
+    /* 效果 */
+    #boxall:hover{
+        background-color: black;
+    }
+    #boxall:hover .menu{
+        color: #4267b2;
+        transform: scale(1.2);
+    }
+    #boxall:hover .box-phone{
+        display: block;
+    }
+    .banner-img{
+        transition: 0.9s;
+    }
+    .banner-img:hover{
+        transform: scale(1.2);
+    }
+    .redhair-img{
+        transition: 0.9s;
+    }
+    .redhair-img:hover{
+        transform: scale(1.2);
+    }
+    .black-img{
+        transition: 0.9s;
+    }
+    .black-img:hover{
+        transform: scale(1.2);
+    }
+    #content-kaido{
+        transition: 0.9s;
+    }
+    #content-kaido:hover{
+        transform: scale(1.2);
+    }
+    .bigmom-img1{
+        transition: 0.9s;
+    }
+    .bigmom-img1:hover{
+        transform: scale(1.2);
+    }
+    .bigmom-img2{
+        transition: 0.9s;
+    }
+    .bigmom-img2:hover{
+        transform: scale(1.2);
+    }
+    #box1,
+    #box2,
+    #box3,
+    #box4,
+    #box5{
+        width: 110%;
+        padding: 10px;
+    }
+
+    #box1:hover,
+    #box2:hover,
+    #box3:hover,
+    #box4:hover,
+    #box5:hover{
+        /* 一次五個都要做同樣觸碰效果 */
+        border-radius: 30%;
+        background-color: rgb(233, 18, 233);
+    }
+    .trans-08{
+        transition: 0.8s;
+    }
+    
+    .logo-img:hover{
+        transform: scale(1.3) scaleY(-1) rotate(360deg);
+        
+    }
+
+}

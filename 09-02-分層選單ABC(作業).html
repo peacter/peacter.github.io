@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #button-1,#button-2,#button-3{
+            background-color: pink;
+            padding: 10px 0;
+            width: 5%;
+            border-bottom: none;
+            border-right: none;
+            /* 消除按鈕下邊與右邊的預設雙線(看起來像個立體陰影) */
+            cursor: pointer;
+            /* 游標樣式改小手手 */
+            outline:none;
+            /* 消除按鈕預設點擊後會有的藍色框 */
+        }
+        #button-1{
+            border-top-left-radius: 30%;
+        }
+        #button-3{
+            border-top-right-radius: 30%;
+            
+        }
+        .content-1{
+            display: none;
+            background-color: wheat;
+            padding: 20px 40px;
+        }
+        .content-2{
+            display: none;
+            background-color: wheat;
+            padding: 20px 40px;
+        }
+        .content-3{
+            display: none;
+            background-color: wheat;
+            padding: 20px 40px;
+        }
+        .out{
+            display: block;
+        }
+        #button-1:hover,
+        #button-2:hover,
+        #button-3:hover{
+            background-color: wheat;
+        }
+
+        /* 點擊改變顏色設定 */
+        #button-1.changeColor{
+            background-color: wheat;
+        }
+        #button-2.changeColor{
+            background-color: wheat;
+        }
+        #button-3.changeColor{
+            background-color: wheat;
+        }
+        
+    </style>
+
+</head>
+<body>
+    <button id="button-1">AAA</button><button id="button-2">BBB</button><button id="button-3">CCC</button>
+    <!-- 換行會有間隙= = -->
+    <div class="content-1 out"><h1>AAAAAAAAAAAAAAAAAAAAAAAAAAAA</h1></div>
+    <div class="content-2"><h1>BBBBBBBBBBBBBBBBBBBBBBBBBBBB</h1></div>
+    <div class="content-3"><h1>CCCCCCCCCCCCCCCCCCCCCCCCCCCC</h1></div>
+
+    <script>
+        var btn_1 = document.querySelector("#button-1");
+        var btn_2 = document.querySelector("#button-2");
+        var btn_3 = document.querySelector("#button-3");
+        var ctt_1 = document.querySelector(".content-1");
+        var ctt_2 = document.querySelector(".content-2");
+        var ctt_3 = document.querySelector(".content-3");
+
+        btn_1.onclick = function(){
+                ctt_1.classList.add("out");
+                ctt_2.classList.remove("out");
+                ctt_3.classList.remove("out");
+
+                btn_1.classList.add("changeColor");
+                btn_2.classList.remove("changeColor");
+                btn_3.classList.remove("changeColor");
+        }
+        btn_2.onclick = function(){
+                ctt_2.classList.add("out");
+                ctt_1.classList.remove("out");
+                ctt_3.classList.remove("out");
+
+                btn_2.classList.add("changeColor");
+                btn_1.classList.remove("changeColor");
+                btn_3.classList.remove("changeColor");
+        }
+        btn_3.onclick = function(){
+                ctt_3.classList.add("out");
+                ctt_1.classList.remove("out");
+                ctt_2.classList.remove("out");
+
+                btn_3.classList.add("changeColor");
+                btn_1.classList.remove("changeColor");
+                btn_2.classList.remove("changeColor");
+        }
+    </script>
+</body>
+</html>

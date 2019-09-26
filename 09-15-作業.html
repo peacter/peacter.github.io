@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/goldbootstrap.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- ↑ 匯入黃金比例套件 -->
+    <!-- ↓ 匯入swiper套件css  Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
+    <style>
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        body {
+            background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+        .banner{
+            /* 加寬度會有卷軸 */
+            height: calc(100vh - 64px);
+            /* 在父層加高度才有內容，記得扣掉nav */
+            /* 若nav為浮動  則設100vh  再用padding-top */
+        }
+        .navbar{
+            margin-bottom: 0;
+            /* 消除預設 */
+        }
+        .bg-1{
+            background-image: url("https://image.cache.storm.mg/styles/smg-800x533-fp-wm/s3/media/image/2019/09/12/20190912-112907_U6571_M550147_fb02.jpg?itok=Un07qe4i");
+        }
+        .bg-2{
+            background-image: url("https://images.chinatimes.com/newsphoto/2019-09-15/900/20190915002990.jpg");
+        }
+        .bg-3{
+            background-image: url("https://storage.googleapis.com/www-cw-com-tw/article/201812/article-5c29b2501e4eb.jpg");
+        }
+        .bg-4{
+            background-image: url("https://image.cache.storm.mg/styles/smg-800x533-fp/s3/media/image/2018/06/23/20180623-084724_U720_M425427_0fa2.jpg?itok=k9YBo6HZ");
+        }
+        .bg-5{
+            background-image: url("https://storage.googleapis.com/www-cw-com-tw/article/201905/article-5ce380028b65b.jpg");
+        }
+        .bg-setting{
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        footer {
+            background-color: gray;
+        }
+        footer .container p {
+            text-align: center;
+            font-size: 20px;
+            padding: 10px 0;
+            /* ↑拓展上下間距 */
+            margin: 0;
+            /* ↑置中 */
+        }
+        @media (max-width: 1920px) and (min-width: 1280px) {
+            .container {
+                max-width: 80vw;
+            }
+
+            footer {
+                background-color: gray;
+            }
+
+            footer .container p {
+                text-align: center;
+                font-size: 20px;
+                padding: 10px 0;
+                /* ↑拓展上下間距 */
+                margin: 0;
+                /* ↑置中 */
+            }
+
+        }
+
+        @media (min-width: 1920px) {
+            .container {
+                max-width: 1800px;
+            }
+
+            footer {
+                background-color: gray;
+            }
+
+            footer .container p {
+                text-align: center;
+                font-size: 20px;
+                padding: 10px 0;
+                /* ↑拓展上下間距 */
+                margin: 0;
+                /* ↑置中 */
+            }
+        }
+        
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img class="mh-100"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Flag_of_the_Republic_of_China.svg/225px-Flag_of_the_Republic_of_China.svg.png"
+                    alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#section_about">about<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#section_product">product<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#section_information">information<span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="banner">
+        <!-- 匯入Swiper輪播 記得banner要給size -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide bg-1 bg-setting"></div>
+                <div class="swiper-slide bg-2 bg-setting"></div>
+                <div class="swiper-slide bg-3 bg-setting"></div>
+                <div class="swiper-slide bg-4 bg-setting"></div>
+                <div class="swiper-slide bg-5 bg-setting"></div>
+            </div>
+            <!-- Add Pagination 匯入點點-->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows 匯入左右箭-->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+    <section class="about mt-5" id="section_about">
+        <div class="container">
+            <div class="row">
+                <!--     黃金比例 ↓ 手機版排序 ↓   ↓ 電腦版排序 -->
+                <div class="col-gold-lg order-2 order-lg-0 p-5">
+                    歷經1860年臺灣開港以來至日治時期所打下的現代化基礎，以及中華民國政府遷臺後運用美援所進行的一系列的經濟建設，加上國際上冷戰對峙的格局，使臺灣自1960年代起在經濟與社會發展上突飛猛進，締造舉世聞名的「臺灣奇蹟」，名列亞洲四小龍之一；之後在1990年代躋身已開發國家之列，目前無論人均所得或人類發展指數均具世界先進國家水準。臺灣擁有蓬勃的製造業及尖端科技，在半導體、資訊科技、通訊、電子精密製造等領域執牛耳。貿易方面主要透過高科技產業賺取外匯，經濟發展上以高科技產業與服務業為中心，亦朝向文化產業及觀光業發展。隨著1987年戒嚴時代結束以來政治上的自由化與民主化，以國民兩黨為首的政黨政治、統獨議題、以及公民社會的形成，臺灣逐漸淡化過往戒嚴時代形塑的中國史觀，發展出臺灣主體意識與多元文化主義，使得臺灣文化呈現多元並立的面貌。
+                </div>
+                <div class="col-gold-sm">
+                    <img class="mw-100"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Landform_of_Formosa.png/220px-Landform_of_Formosa.png"
+                        alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="product mt-5" id="section_product">
+        <div class="container">
+            <div class="row">
+                <!--               ↓ 調整個卡片 手機板與電腦版佔據 -->
+                <div class="col-lg-4 col-12">
+                    <div class="card">
+                        <img src="./img/郭台銘.jpg" class="card-img-top" alt="...">
+                        <!-- 預設width拿掉，以免間距 -->
+                        <div class="card-body">
+                            <h5 class="card-title">郭台銘</h5>
+                            <p class="card-text">
+                                郭台銘（1950年10月18日－，暱稱郭董、果凍、現代版成吉思汗）是中華民國新北市板橋出身的企業家，籍貫山西省晉城縣。臺灣省立板橋高級中學初中部（今新北市立板橋高級中學）、中國海事專科學校（今臺北海洋科技大學）五專部航運管理科畢業，是鴻海科技集團（富士康）、鴻海精密（鴻海）的董事、前董事長以及永齡文教慈善基金會創辦人，中華民國首富。
+
+                                2019年4月17日，獲頒中國國民黨榮譽黨員狀並宣布投入中國國民黨的2020年中華民國總統選舉黨內初選，同年6月21日辭去鴻海集團董事長職務，雖未能獲得黨內提名，但表示將思考下一步政治動向；同年9月12日基金會發言人代郭台銘宣布退出加入49年的中國國民黨，恢復無黨籍身份。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-12">
+                    <div class="card">
+                        <img src="./img/韓國瑜.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">韓國瑜</h5>
+                            <p class="card-text">
+                                韓國瑜（1957年6月17日－），中華民國政治人物，中國國民黨籍，生於今新北市中和區，現任高雄市市長，中華民國陸軍軍官學校專修學生班40期、東吳大學英國語文學系文學學士、國立政治大學東亞研究所法學碩士。
+
+                                曾任第12屆臺北縣議員及三屆（第2－4屆）立法委員。2001年角逐不分區立委失利；2005年，出任臺北縣中和市副市長1年8個月；2007年曾打算再戰國會，因黨內初選中指控對手張慶忠，被黨部取消初選資格。2012年被指派擔任臺北農產運銷公司總經理。2016年9月辭職未成，2017年因參選於1月辭職，3月離職，參選國民黨主席落敗。
+
+                                2017年9月，成為國民黨高雄市黨部主委。2018年4月遷籍高雄市林園區，5月在初選勝出並代表國民黨參選高雄市長，11月24日舉行的中華民國地方首長選舉以89萬2545票、15萬多票差距擊敗民主進步黨候選人陳其邁而獲勝，結束民進黨在高雄市20年及原高雄縣33年的執政。
+
+                                2019年6月5日，韓國瑜就任高雄巿長162天，經過和徵詢小組對談後打破曾在高雄市長選前保證不會半途離職的承諾，他表態願意被動徵召角逐國民黨總統初選。8日於花蓮場2020總統參選造勢大會公開宣告已登記黨內初選，後於初選中勝出代表國民黨參加2020年中華民國總統選舉。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-12">
+                    <div class="card">
+                        <img src="./img/柯文哲.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">柯文哲</h5>
+                            <p class="card-text">
+                                柯文哲（1959年8月6日－），暱稱柯P、KP，中華民國著名外科醫師、政治人物。現任臺北市市長、台灣民眾黨黨主席。國立臺灣大學醫學院臨床醫學研究所博士畢業，曾任臺大醫院急診部醫師、臺大醫院創傷醫學部主任、臺大醫學院教授，專長為外科重症醫學、器官移植
+                                、人工器官等，是臺灣第一個急診與重症加護專職醫生，為臺灣器官標準移植程序的建立者，也是首位將葉克膜（ECMO）技術引進臺灣的醫師。
+
+                                在2006年後開始在媒體曝光而知名，2014年宣布參選臺北市市長選舉，並以「在野大聯盟」為號召，同年當選臺北市第15任直轄市市長，成為臺北市改制直轄市後首位無黨籍市長。
+
+                                2018年，參選臺北市市長並成功連任。2019年7月12日，柯文哲受訪表示，最晚9月17日以前決定是否投入2020年總統選舉。2019年7月31日，柯文哲完成台灣民眾黨創黨登記，於8月6日正式創黨，並出任台灣民眾黨主席。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="information mt-5" id="section_information">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <img class="mw-100"
+                        src="https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/2018/06/26/99/5410594.jpg&x=0&y=0&sw=0&sh=0&sl=W&fw=1050"
+                        alt="">
+                </div>
+                <div class="col-12 order-lg-0 col-lg-6 p-5">
+                    陳之漢（1979年3月12日－），原名陳思翰，臺灣宜蘭縣人，生於臺北縣蘆洲鄉（今新北市蘆洲區），知名部落客、直播主、YouTuber、網路名人、企業家、慈善家、運動員、健身教練、散打武術家，由於身為連鎖健身館創辦人，人稱「館長」。曾任中華民國志願役軍人，後為健身館創辦人兼執行長、「中華民國健力協會」顧問，除了健身事業之外，陳之漢並經營服飾及餐飲。
+                </div>
+            </div>
+            <div class="w-100"></div>
+            <!-- ↑換行 -->
+            <div class="row">
+                <div class="col-12 col-lg-6 order-1 order-lg-0 p-5">
+                    黃國昌，新北市汐止人，中華民國政治人物、學者，曾任律師、中央研究院研究員、法學教授等職。前時代力量黨主席。第九任立法委員，在立法院被分至財政委員會。長期關心並參與學運、社運，長期投身司法改革。曾任澄社社長，公民組合發起人之一，佔領國會事件後，發起新組織島國前進。
+                </div>
+                <div class="col-12 order-lg-1 col-lg-6">
+                    <img class="mw-100"
+                        src="https://buzzorange.com/wp-content/uploads/2017/01/%E9%BB%83%E5%9C%8B%E6%98%8C.png" alt="">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>copyright~~~balabalabalabalabalabalabalabalabalabala</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+    <!-- 匯入swiper套件 js  -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <!-- Initialize Swiper 匯入輪播的JS -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            loop: true,
+            // ↑匯入可以循環的JS
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            // ↑匯入點點的JS  記得補上 },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+</body>
+
+</html>

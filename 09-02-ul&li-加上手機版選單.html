@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
+<style>
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+header ul{
+    margin: 0;
+    padding: 0;
+    /* 消除預設 */
+}
+.container{
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+}
+header nav{
+    width: 100%;
+    background-color: red;
+}
+#logo{
+    height: 38px;
+    
+}
+.logo-img img{
+    height: 100%;
+    display: block;
+    /* img預設為Inline */
+}
+.li-group1{
+    display: flex;
+    /* 讓子元素橫向並排 */
+    list-style-type: none;
+    /* 拿掉標頭點點 */
+    
+}
+.li-setting1{
+    background-color: aqua;
+    
+}
+.li-setting{
+    background-color: aqua;
+    
+}
+.li-group1 li a{
+    text-decoration: none;
+    /* 將超連結預設的底線拿掉 */
+    padding: 10px 10px;
+    /* 讓滑鼠也能點擊到顏色方塊區域(用a的padding來控制box內的寬高距離) */
+    display: block;
+    /* 因為預設為inline */
+    
+}
+/* 做一些效果 */
+.li-group1 a:hover{
+    background-color: white;
+    transform: scale(1.2);
+}
+.li-setting1:hover .li-group2{
+    display: block;
+}
+.li-group2{
+    background-color: blue;
+    list-style-type: none;
+    position: absolute;
+    top: 38px;
+    display: none;
+}
+footer{
+    background-color: gray;
+}
+footer nav ul a{
+    text-decoration: none;
+    /* 拿掉footer內大標的超連結底線 */
+}
+footer nav .li-group3{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    justify-content: flex-start;
+}
+footer nav .li-group3 li{
+    margin-right: 20px;
+    /* 讓每個第二層的li都能夠彼此有間距 */
+    list-style-type: none;
+    padding: 9px;
+}
+
+.section-1{
+    padding: 50px;
+    font-size: 18px;
+}
+.li-groupA{
+    padding: 15px 0 0 0;
+    /* 消除左邊預設，並與上面能夠有些距離 */
+    display: flex;
+    flex-direction: column;   
+}
+
+.icon_setting{
+    display: none;
+}
+
+@media (max-width: 450px) {
+    .li-group1{
+        display: none;
+        position: absolute; 
+        flex-direction: column;
+        top: 38px;
+        width: 100%;
+    }
+    
+    .icon_setting{
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: white;
+        padding: 10px;
+        margin-right: 10px;
+        border: 2px solid white;
+        border-radius: 8px;
+    }
+    .btn_toggle{
+        display: block;
+    }
+ 
+}
+
+</style>
+    
+</head>
+
+<body>
+    <header>
+    <nav>
+    <div class="container">
+    
+        <div id="logo" class="logo-img">
+            <img src="https://www.easypeasyandfun.com/wp-content/uploads/2019/01/Finished-Lion-Drawing-1.png" alt="">
+        </div>
+        <ul id="mobileMenu" class="li-group1">
+            <li class="li-setting1"><a href="">111</a>
+                <ul class="li-group2">
+                    <li><a href="">AAA</a></li>
+                    <li><a href="">BBB</a></li>
+                    <li><a href="">CCC</a></li>
+                </ul>
+            </li>
+            <li class="li-setting"><a href="">222</a></li>
+            <li class="li-setting"><a href="">333</a></li>
+        </ul>
+    </div>
+    </nav>
+        <div id="btn"><i class="fas fa-bars icon_setting"></i>
+        <!-- 匯入手機板選單icon -->
+        </div>
+    
+    </header>
+    <section class="section-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta nisi id maiores voluptatibus animi iste ipsum possimus corrupti. Mollitia sapiente eaque aut sequi iure, consectetur, consequuntur ex sed assumenda soluta doloribus blanditiis praesentium amet labore ipsam beatae numquam et iste veritatis! Possimus aperiam accusamus molestiae sint consequuntur, ratione culpa expedita quos nobis cum. Assumenda corrupti hic beatae, officia iste tempora architecto earum ab explicabo facere odit perspiciatis, fugiat molestias alias eum commodi minus. Itaque aliquam sint totam officia rem velit non ipsam cumque obcaecati facere tempore optio, praesentium quidem! Tempore totam eligendi aperiam cumque optio aut eius neque cupiditate sapiente dicta eos a incidunt magni placeat ullam minima, ratione repellendus sit consectetur. Perspiciatis facilis numquam ipsum, aliquid odio delectus eveniet corporis blanditiis ex quis molestias voluptates quod corrupti et, fugiat nemo aspernatur aut tempore sapiente! Alias laudantium iure harum. Rem ad, veniam minus quo possimus officia vel eos eaque asperiores non, amet neque omnis at molestias. Labore corrupti laborum facere architecto iure ex repudiandae eligendi beatae sint dolorem. Totam, a? Voluptatum, repellendus modi rerum ab ullam, quos vero minus nisi quisquam, laboriosam facilis totam omnis corrupti in sint. Ratione adipisci rerum doloribus, quis, laudantium repudiandae deserunt iste soluta magnam et officiis unde dicta? Excepturi aliquam necessitatibus delectus vitae repudiandae sed fugiat voluptate aspernatur. At omnis totam ad nostrum atque possimus, nisi blanditiis quod consequuntur ut incidunt molestiae! Optio magni quasi accusantium! Vitae blanditiis sit magni sint quidem tempora error, adipisci labore, possimus at fugiat iste doloremque exercitationem placeat? Inventore possimus magnam facere! Aut optio, est atque, autem dignissimos fugit sunt vel nisi illo repellendus harum amet suscipit repellat quisquam repudiandae odio recusandae velit magnam, enim deleniti ipsa accusamus quo maiores aperiam? Debitis quis ab iusto aperiam dolore magnam, ipsum ad a deserunt aliquam saepe nulla odio sint impedit culpa non amet similique ea ducimus provident, modi ullam consequuntur quidem. Recusandae earum quis ducimus deserunt, minus sit aperiam beatae commodi dolore nulla. Doloremque laborum rem dolore repellendus. Magnam, nobis. Recusandae voluptate vero eligendi. Aspernatur, ducimus, quisquam sed consequatur earum molestiae porro, tenetur inventore dolorum voluptate perspiciatis provident. Provident obcaecati illum, tempore soluta nemo quibusdam molestiae veniam tenetur sit sequi ipsam odit temporibus unde mollitia veritatis repellendus. Iusto eaque architecto, dolorum amet eum qui beatae veniam magni corporis perspiciatis natus quo quas possimus repellat temporibus officia consequuntur necessitatibus sit eveniet obcaecati quis minima inventore similique. Veniam, expedita facilis dolorum eius mollitia odio perferendis aperiam laboriosam fuga sapiente numquam commodi error necessitatibus ullam adipisci. Perspiciatis fugiat quaerat delectus, necessitatibus porro voluptatum dolores. Officiis voluptatibus nesciunt sint doloribus veniam recusandae officia repellendus voluptatum perspiciatis temporibus natus tenetur perferendis accusamus ad ducimus pariatur dolorum eius quibusdam non, laboriosam fuga. Libero vitae non ipsam enim. Voluptatem quis nostrum maxime? Nulla accusamus adipisci, voluptatum magni totam architecto, nisi ipsam repudiandae et dolorem a illo? Enim consectetur reprehenderit quisquam rerum! Dolor nesciunt culpa dolores, praesentium molestiae commodi veniam sapiente, eius quis consectetur, quam doloremque aliquam officiis! Culpa debitis reprehenderit totam molestias quaerat dolore vel delectus accusamus, consequatur fugiat.</section>
+    <section></section>
+    <section></section>
+    <footer>
+        <div class="container">
+        <nav>
+            <ul class="li-group3">
+                <li><a href="">頁面1</a>
+                    <ul class="li-groupA">
+                        <li>頁面1-子頁面1</li>
+                        <li>頁面1-子頁面2</li>
+                        <li>頁面1-子頁面3</li>
+                    </ul>
+                </li>
+                <li><a href="">頁面2</a>
+                    <ul class="li-groupA">
+                        <li>頁面2-子頁面1</li>
+                        <li>頁面2-子頁面2</li>
+                        <li>頁面2-子頁面3</li>
+                    </ul>
+                </li>
+                <li><a href="">頁面3</a>
+                    <ul class="li-groupA">
+                        <li>頁面3-子頁面1</li>
+                        <li>頁面3-子頁面2</li>
+                        <li>頁面3-子頁面3</li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        </div>
+    </footer>
+
+    <script>
+        // 放在/body前放在/body前放在/body前
+        var btnMenu = document.querySelector("#btn");
+        var three = document.querySelector("#mobileMenu");
+    
+        btnMenu.onclick = function(){
+            three.classList.toggle("btn_toggle");
+        }
+    </script>
+</body>
+</html>
+
+<!-- 
+    1.收合功能
+        ok
+
+    2.js變數命名
+        ok
+ -->

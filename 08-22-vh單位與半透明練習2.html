@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <style>
+    body{
+        margin: 0;
+        
+    }
+    #box1{
+        width: 100%;
+        height: 100vh;
+        background-image: url("./img/cat.jpg");
+        background-attachment: fixed;
+        /*釘住貓咪*/
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position:  center;
+        
+        position: relative;
+        
+    }
+    #box-text{
+        background-color: black;
+        width: 332.13px;
+        height: 64px;
+        float: center;
+        font-size: 26px;
+        letter-spacing: 12px;
+        position: absolute;
+        font-family: 'Source Sans Pro', sans-serif;
+        text-align: center;
+        left: calc(50% - 166.065px);
+        top: calc(50% - 32px);
+        line-height: 64px;
+        /* 將文字行高設跟黑色方塊一樣即可置中  */
+   
+    }
+    #box2{
+        background-color: rgba(241, 241, 241, 0.3);
+        width: 100%;
+        height: 100vh;
+        background-position: fixed;
+        
+        box-sizing: border-box;
+    }
+    
+    #text1{
+        width: 100%;
+        /* 別設高度，這樣才能RWD */
+        text-align: center;
+        box-sizing: border-box;
+        padding: 4% 5% 3% 5%;
+    }
+    #text1-main{
+        width: 100%;
+        height: 15%;
+        text-align: center;
+        font-family: 'Source Sans Pro', sans-serif;
+        letter-spacing: 5px;
+        font-size: 14pt;
+    }
+    #text1-content{
+        line-height: 1.5;
+        text-align: left;
+    }
+    
+    #boxA{
+        width: 100%;
+        height: 100vh;
+        background-image: url("./img/dog.jpeg");
+        background-attachment: fixed;
+        /*釘住狗*/
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position:  center;
+        position: relative;
+    }
+    #boxA-text{
+        background-color: none;
+        width: 332.13px;
+        height: 64px;
+        float: center;
+        font-size: 26px;
+        letter-spacing: 12px;
+        position: absolute;
+        font-family: 'Source Sans Pro', sans-serif;
+        text-align: center;
+        left: calc(50% - 166.065px);
+        top: calc(50% - 32px);
+        line-height: 64px;
+        /* 將文字行高設跟box方塊一樣即可置中  */   
+    }
+    #boxA-mask{
+        background-color: rgba(241, 241, 241, 0.3);
+        width: 100%;
+        height: 100vh;
+        background-position: fixed;        
+        box-sizing: border-box;
+    }
+    #text2{
+        background-color: black;
+        width: 100%;
+        /* 別設高度，這樣才能RWD */
+        color: white;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 15px;
+        text-align: left;
+        line-height: 157px;
+        box-sizing: border-box;
+        padding: 0 0 0 5%;
+    }
+    #boxB{
+        width: 100%;
+        height: 100vh;
+        background-image: url("./img/bird.jpg");
+        background-attachment: fixed;
+        /*釘住鳥*/
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position:  center;
+        position: relative;
+    }
+    #boxB-text{
+        background-color: none;
+        width: 332.13px;
+        height: 64px;
+        float: center;
+        font-size: 26px;
+        letter-spacing: 12px;
+        position: absolute;
+        font-family: 'Source Sans Pro', sans-serif;
+        text-align: center;
+        left: calc(50% - 166.065px);
+        top: calc(50% - 32px);
+        line-height: 64px;
+        /* 將文字行高設跟box方塊一樣即可置中  */   
+    }
+    #boxB-mask{
+        background-color: rgba(241, 241, 241, 0.3);
+        width: 100%;
+        height: 100vh;
+        background-position: fixed;        
+        box-sizing: border-box;
+    }
+    #text3{
+        background-color: black;
+        width: 100%;
+        /* 別設高度，這樣才能RWD */
+        color: white;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 15px;
+        text-align: left;
+        line-height: 157px;
+        box-sizing: border-box;
+        padding: 0 0 0 5%;
+    }
+    #boxC{
+        width: 100%;
+        height: 100vh;
+        background-image: url("./img/cat.jpg");
+        background-attachment: fixed;
+        /*釘住貓*/
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position:  center;
+        position: relative;
+    }
+    #boxC-text{
+        background-color: black;
+        width: 332.13px;
+        height: 64px;
+        float: center;
+        font-size: 26px;
+        letter-spacing: 12px;
+        position: absolute;
+        font-family: 'Source Sans Pro', sans-serif;
+        text-align: center;
+        left: calc(50% - 166.065px);
+        top: calc(50% - 32px);
+        line-height: 64px;
+        /* 將文字行高設跟黑色方塊一樣即可置中  */
+    }   /* ---------也可以省略直接拿box1的來用(名字一樣貼在body) */
+    
+    #boxC-mask{
+        background-color: rgba(241, 241, 241, 0.3);
+        width: 100%;
+        height: 100vh;
+        background-position: fixed;        
+        box-sizing: border-box;
+    }
+    </style>
+</head>
+<body>
+<div id="box1">
+    <div id="box-text">
+        <font color="white">
+            SCROLL DOWN
+        </font>
+    </div>
+    <div id="box2">
+    
+    </div>
+</div>
+<div id="text1">
+    <div id="text1-main">
+    <font>
+        <B>PARALLAX DEMO</B>
+    </font>
+    </div>
+    <div id="text1-content">
+    <font size="3.5" color="#777" weight="400">
+        Parallax scrolling is a web site trend where the background content is moved at a different speed than the foreground content while scrolling. Nascetur per nec posuere turpis, lectus nec libero turpis nunc at, sed posuere mollis ullamcorper libero ante lectus, blandit pellentesque a, magna turpis est sapien duis blandit dignissim. Viverra interdum mi magna mi, morbi sociis. Condimentum dui ipsum consequat morbi, curabitur aliquam pede, nullam vitae eu placerat eget et vehicula. Varius quisque non molestie dolor, nunc nisl dapibus vestibulum at, sodales tincidunt mauris ullamcorper, dapibus pulvinar, in in neque risus odio. Accumsan fringilla vulputate at quibusdam sociis eleifend, aenean maecenas vulputate, non id vehicula lorem mattis, ratione interdum sociis ornare. Suscipit proin magna cras vel, non sit platea sit, maecenas ante augue etiam maecenas, porta porttitor placerat leo.
+    </font>
+    </div>
+</div>
+<div id="boxA">
+    <div id="boxA-text">
+        <font color="white"><B>LESS HEIGHT</B>
+        </font>
+    </div>
+    <div id="boxA-mask"></div>
+</div>
+<div id="text2">
+    <font>Scroll up and down to really get the feeling of how Parallax Scrolling works.
+    </font>
+</div>
+    <div id="boxB">
+    <div id="boxB-text">
+            <font color="white"><B>SCROLL UP</B>
+            </font>
+    </div>
+    <div id="boxB-mask"></div>
+</div>
+<div id="text3">
+        <font>Scroll up and down to really get the feeling of how Parallax Scrolling works.
+        </font>
+</div>
+<div id="boxC">
+    <div id="boxC-text">
+            <font color="white">
+                COOL !
+            </font>
+        </div>
+        <div id="boxC-mask"></div>
+</div>
+</body>
+</html>

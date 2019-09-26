@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<style>
+    .img_s{
+        width: 500px;
+    }
+</style>
+
+</head>
+
+<body>
+    <img class="img_s" src="./img/cat1.jpg" alt="">
+
+    <script>
+        var imggg = document.querySelector(".img_s");
+
+        imggg.onclick = function(){
+            var box = imggg.getAttribute("src");
+            if(box == "./img/cat1.jpg"){
+                imggg.setAttribute("src", "./img/cat2.jpg");
+            }
+            else{
+                imggg.setAttribute("src", "./img/cat1.jpg");
+            }
+        }
+    </script>
+</body>
+</html>

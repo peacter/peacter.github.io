@@ -1,0 +1,120 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+@media (min-width:1280px)
+{
+    #all{
+        width: 100%;
+        height: 100vh;
+        
+    }
+    nav{
+        width: 200px;
+        height: 100%;
+        float: left;
+        background-color: blue;
+        display: flex;
+        
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 56px;
+    }
+    
+    #logo{
+        width: 80px;
+        height: 80px;
+        background-color: white;
+        margin-bottom: 20px;
+    }
+    .menu{
+        margin: 0 auto;
+    }
+    .logo-img{
+        width: 80px;
+    }
+    .group{
+        text-align: center;
+    }
+    #content{
+        width: calc(100% - 200px);
+        float: left;
+        height: 100%;
+        background-color: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+    }
+    #ABC{
+        display: flex;
+        /* 讓A和B和C能夠橫向排列 */
+        padding: 0 20%;
+    }
+    #A{
+        background-color: white;
+        width: 30%;
+        height: 600px;
+    }
+    #B{
+        background-color: white;
+        width: 30%;
+        height: 600px;
+        margin: 0 10px;
+    }
+    #C{
+        background-color: white;
+        width: 30%;
+        height: 600px;
+    }
+    .img{
+        width: 100%;
+        height: 100%;
+        
+    }
+    /* 動畫製作 */
+    #A:hover {
+        -webkit-animation-duration: 3s;
+        -moz-animation-duration: 3s;
+        -webkit-animation-name: bigger;
+        -moz-animation-name: bigger;
+      }
+    #B:hover {
+        -webkit-animation-duration: 3s;
+        -moz-animation-duration: 3s;
+        -webkit-animation-name: bigger;
+        -moz-animation-name: bigger;
+    }
+    #C:hover {
+        -webkit-animation-duration: 3s;
+        -moz-animation-duration: 3s;
+        -webkit-animation-name: bigger;
+        -moz-animation-name: bigger;
+    }
+
+    @-webkit-keyframes bigger {
+        from {           
+            width: 35%;
+            height: 630px;
+        }
+      
+        to {
+          width: 30%;
+          height: 600px;
+        }
+      }
+      
+      @-moz-keyframes bigger {
+        from {
+            width: 35%;
+            height: 630px;
+        }
+      
+        to {
+            width: 30%;
+            height: 600px;
+        }
+      }
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .container{
+        max-width: 1140px;
+        margin: auto;
+    }
+    .card{
+        width: 30%;
+    }
+    .cards{
+        display: flex;
+        justify-content: center;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="cards">
+            <!-- <div class="card">
+                <div class="card-img">
+                    <img src="" alt="">
+                </div>
+                <h1>三菱藍筆</h1>
+                <p></p>
+            </div>
+            <div class="card">
+                <div class="card-img">
+                    <img src="" alt="">
+                </div>
+                <h1>三菱紅筆</h1>
+                <p></p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img">
+                    <img src="" alt="">
+                </div>
+                <h1>三菱黑筆</h1>
+                <p></p>
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+    <script>
+        var pens = [{
+            name: "藍筆",
+            color: 'blue',
+            size: 0.38,
+            price: 49,
+            brand: "三菱",
+            image: "https://cdn.kingstone.com.tw/cvlife/images/product/20880/2088040250171/2088040250171b.jpg",
+            ingrediant: ['藍色墨水','藍色染料','化學物質'],
+            // 物件中也能再放陣列
+            type: 'pen',
+            test: function(){
+                console.log(GGG);
+            }
+        },{
+            name: "紅筆",
+            color: 'red',
+            size: 0.38,
+            price: 49,
+            brand: "三菱",
+            image: "https://cdn.kingstone.com.tw/cvlife/images/product/20880/2088040249922/2088040249922b.jpg",
+            ingrediant: ['紅色墨水','紅色染料','化學物質'],
+            type: 'pen',
+            test: function(){
+                console.log(GGG);
+            }
+        },{
+            name: "黑筆",
+            color: 'black',
+            size: 0.38,
+            price: 49,
+            brand: "三菱",
+            image: "https://cdn.kingstone.com.tw/cvlife/images/product/20880/2088040250041/2088040250041b.jpg",
+            ingrediant: ['黑色墨水','黑色染料','化學物質'],
+            type: 'pen',
+            test: function(){
+                console.log(GGG);
+            }
+        }
+        ];
+        var cards = document.querySelector(".cards");
+        for (let i = 0; i < pens.length; i++) {
+            const element = pens [i];
+            
+            // 抓取成分
+            var elemnt_ingrediant = pens[i].ingrediant;
+
+            // 使用前導字元`(跟波浪符一起~~~)比較不會出錯
+            cards.innerHTML += (`<div class="card">
+                <div class="card-img">
+                    <img src="${element.image}" alt="">
+                </div>
+                <h1>${element.name}</h1>
+                <p>${element.color}</p>
+                <p>${element.size}</p>
+                <p>${element.price}</p>
+                <p>${element.brand}</p>
+                <p>${elemnt_ingrediant}</p>
+                <p>${element.type}</p>
+            </div>`)
+            
+            
+        }
+    </script>
+</body>
+</html>
+
+<!-- 
+    .card width 30%...? 剩下的10%呢
+
+    1.物件
+    okay
+
+    2.樣板字符
+    okay
+
+    3.innerHTML
+    okay
+-->
