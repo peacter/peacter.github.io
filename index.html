@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>FAQ</title>
+    <title>關於瓦庫</title>
     <!-- ↓ 匯入boostrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
@@ -14,8 +14,13 @@
         integrity="sha384-rtJEYb85SiYWgfpCr0jn174XgJTn4rptSOQsMroFBPQSGLdOC5IbubP6lJ35qoM9" crossorigin="anonymous">
     <!-- ↓ 匯入Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Merriweather|Noto+Serif+TC:500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/FAQ.css">
-    <link rel="shortcut icon" href="/favicon.ico">
+    <!-- ------------------------------ -->
+    <!-- ↓ 匯入 Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
+    <!-- ↓ 匯入02-關於瓦庫css(sass)) -->
+    <link rel="stylesheet" href="css/about.css">
+    <!-- ↓ 匯入AOS套件css -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 </head>
 
@@ -62,84 +67,166 @@
         <div class="booking-icon d-lg-none d-block"><a href=""><i class="far fa-calendar-alt"></i></a></div>
     </nav>
 
-    <section id="FAQQ">
-        <div class="row">
-            <div class="col-12 FAQ-banner">
-                <img src="./img/FAQ-bannerImg.jpg" alt="">
+    <section id="about" class="about">
+        <div class="about-grain1">
+            <img src="./img/about-grain1.jpg" alt="">
+            <div class="container">
+                <img src="./img/about-bannerImg.jpg" alt="" class="d-none d-md-block">
+                <img src="./img/about-bannerImg-mobile.jpg" alt="d-block d-md-none">
+                <div class="about-banner">
+                    <div class="about-banner-color1" data-aos="fade-left" data-aos-offset="200" data-aos-duration="700"
+                    data-aos-easing="ease-in-sine">
+                        <div class="about-banner-text1 d-none d-md-block">
+                            瓦<br>庫<br>故<br>事
+                        </div>
+                        <div class="about-banner-text1 d-block d-md-none">
+                            瓦庫故事
+                        </div>
+                    </div>
+                    <div id="about-text2" class="row">
+                        <div class="col-gold-left">
+                            <div class="row" data-aos="fade-left" data-aos-offset="200" data-aos-duration="700"
+                            data-aos-easing="ease-in-sine">
+                                <div class="col-1 aboutText2G">
+                                    沉穩寧靜之美
+                                    。
+                                    <div class="aboutText2GColor"></div>
+                                </div>
+                                <div class="col-1 aboutText2F">
+                                    彰顯內部古色古香
+                                    、
+                                    <div class="aboutText2FColor"></div>
+                                </div>
+                                <div class="col-1 aboutText2E">
+                                    輔以中國各省老窗花
+                                    ，
+                                    <div class="aboutText2EColor"></div>
+                                    <div class="aboutText2ELine"></div>
+                                </div>
+                                <div class="col-1 aboutText2D">
+                                    外觀以成都寬窄巷子青磚建築為主
+                                    ，
+                                    <div class="aboutText2DColor"></div>
+                                    <div class="aboutText2DLine"></div>
+                                </div>
+                                <div class="col-1 aboutText2C">
+                                    瓦庫團隊花費兩年精雕細琢的品牌
+                                    ，
+                                    <div class="aboutText2CColor"></div>
+                                </div>
+                                <div class="col-1 aboutText2B">
+                                    是繼瓦庫燒肉後
+                                    ，
+                                    <div class="aboutText2BColor"></div>
+                                </div>
+                                <div class="aboutText2A">
+                                    瓦<br>庫<br>麻<br>辣<br>鍋
+                                    <div class="aboutText2ALine"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-gold-right"></div>
+                    </div>
+                </div>    
             </div>
         </div>
-        <div class="container">
-            <div id="FAQ-L-mobile" class="d-block d-md-none">
-                瓦庫來解答
-                <div class="FAQ-L-mobileColor"></div>
-            </div>
-            <div id="FAQ" class="row">
-                <div id="FAQ-L" class="col-1 font-weight-bold d-none d-md-block">
-                    瓦<br>庫<br>來<br>解<br>答
-                    <div class="bg-colorA"></div>
-                    <div class="bg-colorB"></div>
+
+        <div class="about-second">
+            <div class="row d-none d-md-flex">
+                <div class="col-gold-left">
+                    <img src="./img/about-Img2.jpg" alt="">
                 </div>
-                <div class="col-1 p-0"></div>
-                <!-- ↑ 卡白用 -->
-                <div id="FAQ-R" class="col-md-7 col-12">
-                    <!-- 問題11111111111111111111 -->
-                    <div class="row p-FAQR font-weight-bold FQA-GPS">
-                        Q : 請問瓦庫燒肉和瓦庫麻辣鍋是同一個地方嗎 ?
-                        <a data-toggle="collapse" href="#row-1">
-                            <i class="fas fa-plus icon-color FQA-gps d-none d-md-block"></i>
-                        </a>
+                <div class="col-gold-right">
+                    <div class="about-secondA">
+                        <img src="./img/about-Img4.jpg" alt="">
                     </div>
-                    <!-- 收合bootstrap ↑ ↓ -->
-                    <div class="collapse bg-expand-color" id="row-1">
-                        A : 不同地方喔 ~
-                    </div>
-                    <!-- 問題22222222222222222222 -->
-                    <div class="row p-FAQR font-weight-bold FQA-GPS">
-                        Q : 請問麻辣鍋鍋底含有牛油嗎 ? 不吃牛有其他鍋底嗎 ?
-                        <a data-toggle="collapse" href="#row-2">
-                            <i class="fas fa-plus icon-color FQA-gps d-none d-md-block"></i>
-                        </a>
-                    </div>
-                    <div class="collapse bg-expand-color" id="row-2">
-                        A : 有 ~ 牛油是麻辣鍋好吃的秘訣。不吃牛可選老火燉雞/野椒酸菜/上湯番茄/蟲草菌菇。
-                    </div>
-                    <!-- 問題33333333333333333333 -->
-                    <div class="row p-FAQR font-weight-bold FQA-GPS">
-                        Q : 開鍋費為何酌收 $120 ?
-                        <a data-toggle="collapse" href="#row-3">
-                            <i class="fas fa-plus icon-color FQA-gps d-none d-md-block"></i>
-                        </a>
-                    </div>
-                    <div class="collapse bg-expand-color" id="row-3">
-                        A : 開鍋費不單是白飯、醬料 . . . 鍋底完全天然熬煮，麻辣鍋嚴選進口石柱紅乾辣椒、金陽花椒、燈籠椒為底料，老火燉雞更是以老母雞、土雞爪、精華火腿燉煮24小時，因此食材成本較高喔。
-                    </div>
-                    <!-- 問題44444444444444444444 -->
-                    <div class="row p-FAQR font-weight-bold FQA-GPS">
-                        Q : 請問有特約停車場嗎 ?
-                        <a data-toggle="collapse" href="#row-4">
-                            <i class="fas fa-plus icon-color FQA-gps d-none d-md-block"></i>
-                        </a>
-                    </div>
-                    <div class="collapse bg-expand-color" id="row-4">
-                        A : 對面有Times收費停車場喔 ~
-                    </div>
-                    <!-- 問題55555555555555555555 -->
-                    <div class="row p-FAQR font-weight-bold FQA-GPS">
-                        Q : 請問有提供鍋底外帶嗎 ?
-                        <a data-toggle="collapse" href="#row-5">
-                            <i class="fas fa-plus icon-color FQA-gps d-none d-md-block"></i>
-                        </a>
-                    </div>
-                    <div class="collapse bg-expand-color" id="row-5">
-                        <p class="p-0 A5-text">
-                            A : 小鍋(2-4人)$300湯底選一+ 700自選食材 + 15 包裝
-                        </p>
-                        <p class="Q5-padding">
-                            大鍋(4人以上)$600湯底選一+ 700自選食材 + 15 包裝
-                        </p>
+                    <div class="about-secondB">
+                        <img src="./img/about-Img5.jpg" alt="">
                     </div>
                 </div>
             </div>
+            <!-- ↓ 手機版 -->
+            <div class="about-second d-block d-md-none">
+                    <img src="./img/about-Img2.jpg" class="w-100 mb-3" alt="">
+                    <img src="./img/about-Img5.jpg" class="w-100" alt="">
+            </div>
+            <div class="about-grain2">
+                <img src="./img/about-grain2.jpg" alt="">
+                <div class="about-text3-mobile d-block d-md-none">
+                    <p>瓦庫精神</p>
+                    <div class="about-text3-color-mobile"></div>
+                </div>
+                <div class="container">
+                    <div class="about-text3-colorA d-none d-md-block" data-aos="fade-right" data-aos-offset="200" data-aos-duration="700"
+                    data-aos-easing="ease-in-sine">
+                        <div class="about-text3">
+                            瓦<br>庫<br>精<br>神
+                        </div>
+                        <div class="about-text3-colorB"></div>
+                    </div>
+                    <div class="about-text4" data-aos="fade-right" data-aos-offset="200" data-aos-duration="700"
+                    data-aos-easing="ease-in-sine" data-aos-delay="300">
+                        <p>瓦庫廚師親赴成都、重慶拜師學藝，</p>
+                        <p>精選上等辣椒、花椒空運來台，</p>
+                        <p>將道地巴蜀牛油火鍋具備的麻辣鮮香、</p>
+                        <p>厚重口感完整呈現，</p>
+                        <p>重新演繹火鍋文化。</p>
+                        <div class="about-text4-color"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="about-third">
+            <img src="./img/about-Img6.jpg" class="w-100" alt="">
+            <div class="container">
+                <div class="about-third-text" data-aos="fade-left" data-aos-offset="200" data-aos-duration="700"
+                data-aos-easing="ease-in-sine" data-aos-delay="300">
+                    <p>湯頭以天然食材(老母雞)24小時熬煮。</p>
+                    <p>手工製作滑類、餃類與特色小點心，</p>
+                    <p>即便耗時、食材成本高，</p>
+                    <p>也不以低價去競爭提供劣質食材，</p>
+                    <p>我們有自己的選擇，</p>
+                    <p>提供給消費者最甘心的服務！</p>
+                    <div class="about-thirdText-color"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="about-forth">
+            <div class="container">
+                <div class="about-forthText-colorA d-none d-md-block" data-aos="fade-up" data-aos-offset="200" data-aos-duration="700"
+                data-aos-easing="ease-in-sine">
+                    <div class="about-forth-textA">
+                        麻<br>辣<br>故<br>事
+                    </div>
+                </div>
+                <!-- ↓ 手機版 -->
+                <div class="about-forthText-colorA-mobile d-block d-md-none">
+                    <div class="about-forth-textA-mobile">
+                        麻辣故事
+                    </div>
+                </div>
+
+                <img src="./img/about-Img7.jpg" class="d-none d-md-block" alt="">
+                <!-- ↓ 手機版 -->
+                <img id="img-mobile" src="./img/about-Img7.jpg" class="d-block d-md-none" alt="">
+                <div class="about-forth-textB" data-aos="fade-left" data-aos-offset="200" data-aos-duration="700"
+                data-aos-easing="ease-in-sine">
+                    <p class="mb-4"><B>四川人為什麼喜歡吃辣？</B></p>
+                    <p>俗話說：「四川地無三里平，天無三日晴，人無三分銀。」</p>
+                    <p>反映出四川盆地多雨且潮濕的氣候。</p>
+                    <p>生活在這個地區的人不得不以味辛、性熱的食物－</p>
+                    <p>辣椒抵抗不利健康的氣候特色。</p>
+                    <p>辣椒中的辣椒素能使人心跳加速、毛孔擴張、全身冒汗，</p>
+                    <p>將體內的寒氣、濕氣驅趕，</p>
+                    <p>全身便由內而外地暖起來。</p>
+                    <p>亦即中醫所說，</p>
+                        <p>辣椒具有溫中下氣、開胃消食、散寒除濕的作用。</p>
+                    <div class="about-forthText-colorB"></div>
+                </div>
+            </div>
+            <div class="grain3" style="background-image: url('./img/about-grain3.jpg')"></div>
         </div>
     </section>
 
@@ -188,6 +275,12 @@
         </div>
     </footer>
 
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!-- ↑ 匯入AOS套件JS -->
+    <!-- --------------------------------- -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
